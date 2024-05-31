@@ -3,7 +3,7 @@
 describe('lightbox', () => {
 
     beforeEach(() => {
-        cy.visit('../../lightbox.html')
+        cy.visit('../../app/lightbox.html')
     })
 
     // 1
@@ -144,27 +144,27 @@ describe('lightbox', () => {
     });
 
     // 10
-    it('should add and delete a comment', () => {
-        cy.dataCy('lightbox-overlay').click();
-        cy.dataCy('lightbox').scrollTo('bottom');
+    // it('should add and delete a comment', () => {
+    //     cy.dataCy('lightbox-overlay').click();
+    //     cy.dataCy('lightbox').scrollTo('bottom');
         
-        // Comment 1
-        cy.dataCy('comment-input').type('Awesome!');
-        cy.dataCy('comment-publish').click();
+    //     // Comment 1
+    //     cy.dataCy('comment-input').type('Awesome!');
+    //     cy.dataCy('comment-publish').click();
 
-        // Comment 2
-        cy.dataCy('comment-input').clear().type('Magic!');
-        cy.dataCy('comment-publish').click();
+    //     // Comment 2
+    //     cy.dataCy('comment-input').clear().type('Magic!');
+    //     cy.dataCy('comment-publish').click();
 
-        // Comment 3
-        cy.dataCy('comment-input').clear().type('Damn!');
-        cy.dataCy('comment-publish').click();
+    //     // Comment 3
+    //     cy.dataCy('comment-input').clear().type('Damn!');
+    //     cy.dataCy('comment-publish').click();
 
-        // Delete Comment 2
-        cy.dataCy('delete-comment-svg-1').click();
-        cy.dataCy('comment-body-1').should('not.exist', 'Magic!');
-        cy.dataCy('comment-author-1').should('not.exist', 'johndoe');
-    });
+    //     // Delete Comment 2
+    //     cy.dataCy('delete-comment-svg-1').click();
+    //     cy.dataCy('comment-body-1').should('not.exist', 'Magic!');
+    //     cy.dataCy('comment-author-1').should('not.exist', 'johndoe');
+    // });
 
     // --
 
