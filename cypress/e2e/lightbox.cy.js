@@ -143,7 +143,7 @@ describe('lightbox', () => {
         cy.dataCy('overlay-comment-count').should('have.text', 2)
     });
 
-    // 10
+    // 10rgtrger
     // it('should add and delete a comment', () => {
     //     cy.dataCy('lightbox-overlay').click();
     //     cy.dataCy('lightbox').scrollTo('bottom');
